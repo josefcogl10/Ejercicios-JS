@@ -7,9 +7,9 @@
 
 function contarCaracteres(cadena) {
     if (typeof cadena === "string") {
-        return console.log(cadena.length)
+        return console.info(cadena.length)
     } else {
-        return "Debe de ingresar una cadena de texto"
+        return console.warn("Debe de ingresar una cadena de texto");
     }
 }
 const texto = "Ejemplo";
@@ -18,9 +18,9 @@ contarCaracteres(texto);
 // 2. Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"
 function recortarTexto(texto, valor) {
     if (typeof texto === "string" && typeof valor === "number") {
-        return console.log(texto.slice(0, valor));
+        return console.info(texto.slice(0, valor));
     } else {
-        return console.log("Debe de ingresar una cadena de texto y el valor de caracteres a recortar");
+        return console.warn("Debe de ingresar una cadena de texto y el valor de caracteres a recortar");
     }
 }
 
@@ -30,9 +30,9 @@ recortarTexto(texto2, 2);
 // 3. Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']
 function separarTexto(texto, separador) {
     if (typeof texto === "string" && typeof separador === "string") {
-        return console.log(texto.split(separador));
+        return console.info(texto.split(separador));
     } else {
-        return console.log("Debe de ingresar una cadena de texto y el caracter utilizado para separar el texto");
+        return console.warn("Debe de ingresar una cadena de texto y el caracter utilizado para separar el texto");
     }
 }
 
@@ -45,9 +45,9 @@ separarTexto(texto3, " ");
 function repetirTextoNveces(texto, veces) {
     if (typeof texto === "string" && typeof veces === "number") {
         texto = texto + ", ";
-        return console.log(texto.repeat(veces))
+        return console.info(texto.repeat(veces))
     } else {
-        return console.log("Debe de ingresar una cadena de texto y el valor de veces a repetir el texto");
+        return console.warn("Debe de ingresar una cadena de texto y el valor de veces a repetir el texto");
     }
 }
 
