@@ -1,4 +1,4 @@
-/** Ejercicios de Lógica de Programación ( 2 / 10 ) */
+/** Ejercicios de Lógica de Programación ( 2 / 10 ) en JavaScript */
 
 /** 5. Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
 function invertirCadena(cadena) {
@@ -78,7 +78,7 @@ function eliminarPatron(cadena, patron) {
         return;
     }
 
-    const cadenaLimpia = cadena.replace(new RegExp(patron, 'g'), '');
+    const cadenaLimpia = cadena.replace(new RegExp(patron, 'ig'), '');
     console.info(cadenaLimpia);
 
 }
