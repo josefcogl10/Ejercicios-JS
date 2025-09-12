@@ -38,12 +38,14 @@ esParOImpar(22)
 */
 
 /* 14. Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32° */
-function convertirGrados(grados = undefined, unidad = "") {
+function convertirGrados(grados = undefined, unidad = undefined) {
     if (grados === undefined) return console.warn("No ingresaste los grados a convertir");
-    if (unidad == "") return console.warn("No ingresaste la unidad a convertir");
     if (typeof grados !== "number") return console.error(`El valor de los grados ${grados} no es un número`);
     if (grados == 0) return console.info(`El valor de los grados ${grados} debe ser mayor a 0`);
+
+    if (unidad === undefined) return console.warn("No ingresaste la unidad a convertir");
     if (typeof unidad !== "string") return console.error(`El valor de la unidad ${unidad} no es una cadena de texto`);
+    if (unidad.length !== 1 || !/C|F/.test(unidad)) return console.warn("Valor de la unidad a convertir no reconocida");
 
     unidad = unidad.toUpperCase();
 
@@ -60,9 +62,9 @@ function convertirGrados(grados = undefined, unidad = "") {
 
 /*
 convertirGrados();
-convertirGrados(32);
-convertirGrados(0, "X");
-convertirGrados(0, "C");
-convertirGrados(100, "C");
-convertirGrados(32, "F");
+convertirGrados(32,);
+convertirGrados("X",);
+convertirGrados(5, 12);
+convertirGrados(100, "F");
+convertirGrados(32, "Fat");
 */
